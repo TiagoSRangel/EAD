@@ -1,23 +1,48 @@
 ﻿using System;
 
-namespace _2
+namespace Diagnostico
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int[] chave5numeros = new int[5];
+            int num1, num2;
+            int opcao = 0;
 
-            Random numerosrandom = new Random();
+            Console.WriteLine("Digite um numero");
+            num1 = int.Parse(Console.ReadLine());
 
-            for (int x = 0; x < 5; x++)
+            Console.WriteLine("Digite outro numero");
+            num2 = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Somar digite 1");
+            Console.WriteLine("Subtrair digite 2");
+            Console.WriteLine("Dividir digite 3");
+            Console.WriteLine("Multiplicar digite 4");
+
+            opcao = int.Parse(Console.ReadLine());
+
+            if (opcao == 1)
             {
-                while (true)
-                {
-                    int sorteio = numerosrandom.Next(1, 51);
-                }
+                Console.WriteLine(num1 + num2);
             }
-         
+
+            if (opcao == 2)
+            {
+                Console.WriteLine(num1 - num2);
+            }
+
+            if (opcao == 3)
+            {
+                Console.WriteLine(num1 / num2);
+            }
+
+            if (opcao == 4)
+            {
+                Console.WriteLine(num1 * num2);
+            }
+            
         }
     }
 }
